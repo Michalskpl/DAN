@@ -1,0 +1,836 @@
+@font-face {
+    font-display: swap;
+    font-family: Saol Display;
+    font-weight: 400;
+    src: url(/public/fonts/SaolDisplay-Regular.760a763e.woff2) format("woff2"), url(/public/fonts/SaolDisplay-Regular.760a763e.woff2) format("woff")
+}
+@font-face {
+    font-display: swap;
+    font-family: Saol Display;
+    font-style: italic;
+    font-weight: 400;
+    src: url(/public/fonts/SaolDisplay-RegularItalic.4942d644.woff2) format("woff2"), url(/public/fonts/SaolDisplay-RegularItalic.4942d644.woff2) format("woff")
+}
+
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --font05rem: 0.5rem;
+    --fontSmall05: 0.8rem;
+    --font1rem: 1.2rem;
+    --font2rem: 2rem;
+    --font3rem: 3rem;
+    --font4rem: 4rem;
+    --font5rem: 5rem;
+    --font6rem: 6rem;
+    --font7rem: 7rem;
+    --font8rem: 8rem;
+    --font10rem: 10rem;
+    --momo: #161616;
+    --blackBtn: #181924;
+    --bcmomo: #999;
+
+    --hoverbtn: #999;
+}
+
+body{
+    box-sizing: border-box;
+    font-family: 'Saol Display';
+    background-color: rgb(250 245 247);
+    font-size: 1.1rem;
+    max-width: 838px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    height: 100%;
+    opacity: 0;
+    animation: welcomeA 1s;
+}
+
+.welcome{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* opacity: 0; */
+}
+
+.welcoT{
+    opacity: 0;
+}
+
+@keyframes welcomeA{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.welco{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.welco :nth-child(2){
+    display: flex;
+    justify-content: flex-end;
+}
+.w-nav{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    z-index: 999;
+    align-items: center;
+    justify-content: space-between;
+}
+.w-nav .logo{
+    position: relative;
+    padding: 5px;
+    border-radius: 5px;
+    left: 20px;
+    letter-spacing: 2px;
+}
+.w-nav-pointer.active{
+    justify-content: center;
+    flex-direction: row;
+    align-content: center;
+    border-radius: 1px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+
+
+.w-nav-pointer{
+    position: relative;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    right: 17px;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.w-nav-pointer p{
+    background-color: var(--blackBtn);
+    border-radius: 10px;
+    height: 10px;
+    width: 10px;
+    margin: 1px;
+}
+.w-nav-pointer p.active{
+    background-color: var(--blackBtn);
+    border-radius: 10px;
+    height: 10px;
+    width: 2px;
+    margin: 1px;
+}
+
+
+.nav-a{
+    position: sticky;
+    top: 70px;
+    height: 1px;
+    z-index: 999;
+}
+.nav{
+    display: none
+}
+.nav.active{
+    position: sticky;
+    top: 70px;
+    display: flex;
+    height: 90vh;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 999;
+    background-color: var(--blackBtn);
+    border-radius: 17px;
+    zoom: 0.5;
+    left: 50%;
+    animation: navix 1s;
+}
+
+@keyframes navix{
+    0%{
+        opacity: 0
+    };
+    100%{
+        opacity: 1;
+    }
+
+
+}
+.nav .nav-list{
+    height: 100%;
+    text-transform: uppercase;
+    position: relative;
+    width: calc(100% - 100px);
+
+}
+.nav .nav-list a{
+    text-decoration: none;
+    color: #ffff;
+    font-weight: 300;
+}
+.nav .nav-list ul{
+    list-style: none;
+    font-size: var(--font5rem);
+    display: flex;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.nav .nav-list ul li{
+    cursor: pointer;
+}
+
+.nav .nav-list ul li:hover{
+    color: var(--hoverbtn)
+}
+.footer{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: var(--font05rem);
+    flex-direction: row;
+    margin: 60px 0 15px 0px;
+}
+
+.web{
+    position: relative;
+    left: 50%;
+    width: 380px;
+    transform: translate(-50%);
+}
+.webA{
+    position: relative;
+    display: flex;
+    height:40vh;
+}
+
+.web .oneF{
+    display: flex;
+    text-transform: uppercase;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 256px;
+    left: -23px;
+}
+.web .oneF p{
+    margin: 20px 10px 0 0;
+    position: relative;
+    font-size: var(--font5rem);
+}
+.web .oneF p:nth-child(2){
+    margin: -20px 102px -74px 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: var(--font4rem);
+}
+.web .oneF p:nth-child(3){
+    margin: 62px 0px 0 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: var(--font2rem);
+}
+
+.web .twoF{
+    display: flex;
+    text-transform: uppercase;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 377px;
+    zoom: 0.9;
+}
+.web .twoF p{
+    margin: 64px 35px 0 0;
+    position: relative;
+    font-size: var(--font8rem);
+}
+.web .twoF p:nth-child(1){
+    margin: -20px 102px -74px 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: var(--font5rem);
+}
+.web .twoF p:nth-child(3){
+    margin: -20px 102px -74px 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: var(--font5rem);
+}
+
+.web .threeF{
+    position: relative;
+    display: flex;
+    top: -120px;
+    left: 60px;
+    width: 285px;
+    justify-content: flex-end;
+    filter: opacity(0.9);
+    background-image: url(../img/_com.apple.Pasteboard.0UhmVR.PNG);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 500px;
+}
+
+.move{
+    display: flex;
+    justify-content: center;
+}
+
+.move video{
+    width: 300px;
+    border-radius: 20px;
+}
+
+/* - - - - - -- - - - - - - - -  web-ofers - - - - - -  */
+.web-ofers{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+}
+
+.lsn{
+    list-style: none;
+}
+.w-o-t{
+    font-size: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.w-o-t :nth-child(1){
+    font-size: var(--font3rem);
+}
+.w-o-t :nth-child(2){
+    padding: 0 0 0 40px;
+    font-size: var(--font2rem);
+}
+
+
+.aktnier{
+    font-size: 5rem;
+    position: relative;
+    top: 40px;
+    height: 150px;
+    text-transform: uppercase;
+    left: 50%;
+    transform: translate(-60%);
+}
+.ofers-list{
+    position: relative;
+    width: 300px;
+    height: 90px;
+    /* left: 50%;
+    transform: translate(-50%); */
+    margin: 30px 0 0 0;
+}
+.ofers-list ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.ofers-list ul li{
+    display: flex;
+    border: 1px solid #181818;
+    margin: 5px;
+    padding: 5px 10px 5px 10px;
+    background-color: var(--blackBtn);
+    color: aliceblue;
+    border-radius: 5px
+}
+
+.ofers-list ul li:hover{
+    color: var(--hoverbtn);
+}
+
+.ofers-list ul a{
+    text-decoration: none;
+    color: var(--blackBtn);
+}
+.ofers-box{
+    position: relative;
+    display: flex;
+    /* width: 90vw; */
+    margin: 20px 0 0 20px;
+
+}
+.ofers-box .lsn .lsn-title{
+    display: flex;
+    font-weight: 400;
+    margin: 30px 0 10px 0;
+}
+
+.zar_list{
+    display: flex;
+    margin: 0 0 0 20px
+}
+
+.sprzeWyn{
+    font-size: var(--font3rem)
+}
+
+
+/* - - - - - -- - - - - - - - - end  web-ofers - - - - - -  */
+
+/* - - - - -- - - - - - -  realEstate - - - -- - - - -  - */
+.realEstate-box{
+    position: relative;
+    display: flex;
+    /* width: 100vw; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.realEstate-box .o-box{
+    position: relative;
+    display: flex;
+    width: 320px;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+}
+
+.realEstate-box .o-box .pictin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.realEstate-box .o-box .pictin a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.realEstate-box .o-box .pictin a:hover
+{
+    opacity: 0.8;
+}
+
+.realEstate-box .lsn-title{
+    color: var(--blackBtn);
+    display: flex;
+    padding: 10px 0 10px 0;
+    margin: 10px 0 10px 0;
+}
+.lsn-realEstate {
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+    font-size: 6rem;
+    justify-content: center;
+    zoom: 1;
+}
+.lsn-realEstate li{
+    display: flex;
+    padding: 10px;
+flex-direction: row;
+}
+
+.lsn-realEstate img{
+    border-radius: 10px;
+    width: 100%;
+}
+
+
+.opis-ofers{
+    position: absolute;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    margin: 15px;
+    font-size: var(--font1rem);
+}
+
+.cena-o{
+    display: flex;
+    flex-direction: row;
+}
+
+.o-o-g{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 70px;
+    background-color: #ffffff10;
+    backdrop-filter: blur(12px);
+    -webkit-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 10px;
+}
+
+.price-o-o{
+    font-weight: 700;
+}
+
+
+.ViewPictContener{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 999;
+}
+
+.viewPict{
+    width: 100%;
+    height: 700px;
+    background-color: #161616;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.viewPict img{
+    width: 116%;
+}
+
+/* - - - - -- - - - - - - end realEstate - - - -- - - - -  - */
+
+
+/* - - - -- - - - - - - contact - - - - -- - -  */
+
+.web .four{
+position: relative;
+display: flex;
+flex-direction: column;
+margin: 0 0 0 20px;
+width: 350px;
+height: 100%;
+}
+
+.web .four p{
+    display: flex;
+}
+.web .four .kontakt{
+    display: flex;
+    font-weight: 700;
+    justify-content: flex-end;
+    width: 350px;
+    font-size: var(--font7rem);
+}
+
+.web .four .e-mail p:nth-child(1){
+    font-weight: 100;
+    padding: 10px 0 10px 0;
+    font-size: var(--font5rem);
+}
+.web .four .e-mail p:nth-child(2){
+    padding: 10px 0 10px 0;
+    position: relative;
+    /* font-size: var(--font2rem); */
+}
+.web .four .c-tel p:nth-child(1){
+    font-weight: 100;
+    margin: 20px 0 0 130px;
+    font-size: var(--font5rem);
+
+}
+.web .four .c-tel p:nth-child(2){
+    padding: 20px 0 10px 0;
+    font-size: var(--font3rem);
+}
+.web .four .c-tel p:nth-child(3){
+    padding: 20px 0 10px 0;
+    font-size: var(--font3rem);
+}
+
+/* - - - -- - - - - - - end contact - - - - -- - -  */
+
+/* - - - - - - --  about Us - - - - - - - - --  */
+.aboutUs{
+    display: flex;
+    flex-direction: column;
+    height: 767px;
+    top: 100px;
+    position: relative;
+}
+.aboutUs .AbS1{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20px 0 20px;
+    font-weight: 100px;
+}
+
+
+.aboutUs .AbS1 .o-nas{
+    margin: 0 0 40px 0 ;
+    text-transform: uppercase;
+}
+
+.aboutUs .AbS1 .opis-au{
+    margin: 0 0 10px 0;
+    font-weight: 700;
+}
+.cytat-au{
+    position: relative;
+    display: flex;
+    font-style: italic;
+    left: 192px;
+    width: 144px;
+}
+/* - - - - - - -- end about Us - - - - - - - - --  */
+
+
+/* - - - - - - -- - - -  ofer site - - - - - - - */
+
+.web-o-s-o{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* margin: 20px 0 0 20px; */
+    width: 360px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.web-ofers-o{
+    display: flex;
+    justify-content: flex-end;
+    width: 169px;
+    font-size: 2rem;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+.desc-ofer, .kind-ofer{
+    position: relative;
+    display: flex;
+    width: 334px;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.desc-title{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 10px 0;
+}
+.desc-title p:nth-child(1){
+    margin: 10px 0 10px 0;
+    font-size: var(--font2rem);
+}
+.kind-ofer{
+    margin: 10px 0 10px 0;
+}
+.kind-ofer p:nth-child(1n + 1){
+    position: relative;
+    margin-left: 25px;
+    font-size: var(--font3rem);
+}
+.kind-ofer p:nth-child(2n + 2){
+    margin-left: 45px;
+}
+
+.description p{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 10px 0;
+    font-size: var(--font2rem);
+}
+.web-realEstate-no{
+display: flex;
+flex-direction: column;
+width: 90vw;
+}
+.web-realEstate-no .wreIng{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 10px 0;
+    zoom: 0.8;
+    background: var(--blackBtn);
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* - - - - - - -- - - - end  ofer site - - - - - - - */
+
+@media screen and (min-width: 768px){
+    .nav.active {
+        zoom: 1;
+    }
+    .web{
+        display: flex;
+        height: 100%;
+        width: 68vw;
+        left: 50%;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        transform: translate(-50%);
+    }
+    
+    .web .oneF p{
+        margin: 64px 35px 0 0;
+        position: relative;
+        font-size: var(--font5rem);
+    }
+    .web .oneF p:nth-child(2){
+        margin: -20px 102px -74px 0;
+        padding: 0;
+        font-weight: 400;
+        font-size: var(--font10rem);
+    }
+
+    .web .oneF p:nth-child(3) {
+        font-size: var(--font5rem);
+    }
+
+    .web .twoF p{
+        margin: 64px 35px 0 0;
+        position: relative;
+        font-size: var(--font10rem);
+    }
+    .web .twoF p:nth-child(1){
+        margin: -20px 102px -74px 0;
+        padding: 0;
+        font-weight: 400;
+        font-size: var(--font5rem);
+    }
+    .web .twoF p:nth-child(3){
+        margin: -20px 102px -74px 0;
+        padding: 0;
+        font-weight: 400;
+        font-size: var(--font5rem);
+    }
+
+    .web .threeF{
+        top: -7px;
+        width: 482px;
+        font-size: 5rem;
+    }
+    .lsn-realEstate {
+        zoom: 0.8;
+    }
+    .web-realEstate-no {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        font-size: 10rem;
+    }
+    .web-realEstate-no .wreIng{
+        width: 375px;
+    }
+    .web-o-s-o{
+        position: relative;
+        display: flex;
+        width: 650px;
+        left: 50%;
+        transform: translate(-50%);
+        font-size: 6rem;
+    }
+    .desc-ofer, .kind-ofer {
+        width: 100%;
+    }
+
+    .realEstate-box .o-box {
+        position: relative;
+        display: flex;
+        width: 399px;
+        flex-direction: column;
+        justify-content: flex-end;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
+    .realEstate-box .o-box a{
+        width: 500px;
+        height: 260px;
+    }
+    .kind-ofer p:nth-child(2n + 2){
+        margin-left: 45px;
+        font-size: var(--font5rem);
+    }
+
+    .web .oneF {
+        height: 500px;
+    }
+    .web .four .kontakt {
+    font-size: var(--font7rem)
+    }
+
+    .web .four .e-mail p:nth-child(3) {
+        font-size: var(--font3rem)
+    }
+
+    .web .four .c-tel p:nth-child(1) {
+        font-size: var(--font5rem)
+    }
+    .web .four .c-tel p:nth-child(2) {
+        font-size: var(--font3rem)
+    }
+    .aktnier {
+        height: 275px;
+    }
+    .aktnier p:nth-child(1) {
+        font-size: var(--font7rem)
+    }
+    .aktnier p:nth-child(2) {
+        font-size: var(--font3rem)
+    }
+
+    .web .four .e-mail p:nth-child(2){
+        font-size: var(--font2rem);
+    }
+    .web .four {
+        margin: 0 0 0 -49px;
+    }
+
+    .move video{
+        width: 600px;
+    }
+    .w-nav .logo {
+        letter-spacing: 4px;
+    }
+
+    .footer{
+        font-size: var(--fontSmall05);
+    }
+}
+
+/* - - - -- - - - - - back-btn - - - - - - -- - - - */
+.back-btn{
+    position: fixed;
+    display: flex;
+    bottom: 17px;
+    right: 17px;
+    width: 73px;
+    border-radius: 8px;
+    height: 40px;
+    background-color: var(--blackBtn);
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.back-btn:hover{
+    color: var(--bcmomo)
+}
+/* - - - -- - - - - -end  back-btn - - - - - - -- - - - */
