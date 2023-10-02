@@ -2,14 +2,14 @@
     font-display: swap;
     font-family: Saol Display;
     font-weight: 400;
-    src: url(../fonts/SaolDisplay-Regular.760a763e.woff2) format("woff2"), url(../fonts/SaolDisplay-Regular.760a763e.woff2) format("woff")
+    src: url(/fonts/SaolDisplay-Regular.760a763e.woff2) format("woff2"), url(/fonts/SaolDisplay-Regular.760a763e.woff2) format("woff")
 }
 @font-face {
     font-display: swap;
     font-family: Saol Display;
     font-style: italic;
     font-weight: 400;
-    src: url(../fonts/SaolDisplay-RegularItalic.4942d644.woff2) format("woff2"), url(../fonts/SaolDisplay-RegularItalic.4942d644.woff2) format("woff")
+    src: url(/fonts/SaolDisplay-RegularItalic.4942d644.woff2) format("woff2"), url(/fonts/SaolDisplay-RegularItalic.4942d644.woff2) format("woff")
 }
 
 *, ::after, ::before {
